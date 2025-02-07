@@ -39,7 +39,7 @@ Este repositorio forma parte del marco docente de estructura de datos y algoritm
 Los estudiantes editan esta sección para agregar sus nombres, correos electrónicos de Uniandes y especificar qué funcionalidad de proyecto implementarán.
 
 1. Juan David Echeverry, jd.echeverry@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 1.
-1. Nicolas Castaño, n.castano@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 2.
+1. Nicolas Castaño, n.castanoc2@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 2.
 1. Daniel Rincon, da.rinconr12@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 3.
 
 [Volver al inicio](#laboratorio-3)
