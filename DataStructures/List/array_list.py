@@ -1,4 +1,4 @@
-def new_list1():
+def new_list():
     newlist = {
         "elements": [],
         "size": 0
