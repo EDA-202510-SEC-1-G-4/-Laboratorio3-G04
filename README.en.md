@@ -38,9 +38,9 @@ This repository is part of the data structure and algorithms (#EDA) teaching fra
 
 The students edit this section to add their names, Uniandes emails, and specify which project functionality of the project they will implement.
 
-1. Student No. 1 Name, Student No. 1 Uniandes Email, Student No. 1 owned functionality.
-1. Student No. 2 Name, Student No. 2 Uniandes Email, Student No. 2 owned functionality.
-1. Student No. 3 Name, Student No. 3 Uniandes Email, Student No. 3 owned functionality.
+1. Juan David Echeverry, jd.echeverry@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 1.
+1. Nicolas Castaño, n.castano@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 2.
+1. Daniel Rincon, da.rinconr12@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 3.
 
 [Back to top](#sample-list)
 
