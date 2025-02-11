@@ -8,6 +8,7 @@ def new_list():
 
 def get_element(list, index):
     
+    
         return list['elements'][index]
     
 def is_present(my_list, element, compare_function):
@@ -22,5 +23,5 @@ def is_present(my_list, element, compare_function):
                 break
         if keyexists:
             return keypos
-    return element in list['elements']
+    return -1
     
