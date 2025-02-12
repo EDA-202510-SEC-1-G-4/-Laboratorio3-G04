@@ -149,8 +149,13 @@ def get_best_book(catalog):
 
     :return: El libro con el mejor rating
     """
-    # TODO Implementar la función del mejor libro por rating
-    return None
+    libros = catalog['books']
+    r_mayor = libros[0]['average_rating']
+    
+    for i in range(0,len(libros)):
+        if libros[i]['average_rating'] >= r_mayor:
+            r_mayor = libros[i]['average_rating']
+    return r_mayor
 
 
 def count_books_by_tag(catalog, tag):
@@ -162,8 +167,13 @@ def count_books_by_tag(catalog, tag):
 
     :return: El número de libros que fueron etiquetados con el tag dado
     """
-    # TODO Implementar la función de conteo de libros por tag
-    pass
+    contador = 0
+    tag_libros = catalog['book_tags']
+    for i in range(0,len(tag_libros)):
+        tag_libro = tag_libros[i]['tag_id']
+        if tag_libro == tag:
+            contador += 1
+    return contador
 
 
 # Funciones para agregar informacion al catalogo
@@ -258,9 +268,11 @@ def author_size(catalog):
 
     :return: El número de autores en el catálogo
     """
-    # TODO Implementar la función de tamaño de autores
-    pass
-
+    size = 0
+    autores = catalog['authors']
+    for cada_autor in autores:
+        size += 1
+    return size
 
 def tag_size(catalog):
     """
@@ -270,8 +282,11 @@ def tag_size(catalog):
 
     :return: El número de tags en el catálogo
     """
-    # TODO Implementar la función de tamaño de tags
-    pass
+    size = 0
+    tags = catalog['tags']
+    for tag in tags:
+        size += 1
+    return size
 
 
 def book_tag_size(catalog):
@@ -282,8 +297,11 @@ def book_tag_size(catalog):
 
     :return: El número de book_tags en el catálogo
     """
-    # TODO Implementar la función de tamaño de book_tags
-    pass
+    size = 0
+    book_tags = catalog['book_tags']
+    for book_tag in book_tags:
+        size += 1
+    return size
 
 
 # Funciones utilizadas para comparar elementos dentro de una lista
