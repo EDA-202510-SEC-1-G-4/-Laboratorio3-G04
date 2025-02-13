@@ -150,12 +150,15 @@ def get_best_book(catalog):
     :return: El libro con el mejor rating
     """
     libros = catalog['books']
-    r_mayor = libros[0]['average_rating']
+    r_mayor = 0
+    if lt.size(libros) > 0:
+        r_mayor = lt.get_element(libros,0)
     
-    for i in range(0,len(libros)):
-        if libros[i]['average_rating'] >= r_mayor:
-            r_mayor = libros[i]['average_rating']
-    return r_mayor
+        for i in range(0,lt.size(libros)):
+            if lt.get_element(libros,i)['average_rating'] >= r_mayor:
+                r_mayor = lt.get_element(libros,i)['average_rating']
+                
+    return r_mayor + "\n"
 
 
 def count_books_by_tag(catalog, tag):
@@ -169,10 +172,11 @@ def count_books_by_tag(catalog, tag):
     """
     contador = 0
     tag_libros = catalog['book_tags']
-    for i in range(0,len(tag_libros)):
-        tag_libro = tag_libros[i]['tag_id']
-        if tag_libro == tag:
-            contador += 1
+    if lt.size(tag_libros) > 0:
+        for i in range(0,lt.size(tag_libros)):
+            tag_libro = lt.get_element(tag_libros,i)['tag_id']
+            if tag_libro == tag:
+                contador += 1
     return contador
 
 
@@ -268,11 +272,7 @@ def author_size(catalog):
 
     :return: El número de autores en el catálogo
     """
-    size = 0
-    autores = catalog['authors']
-    for cada_autor in autores:
-        size += 1
-    return size
+    return lt.size(catalog['authors'])
 
 def tag_size(catalog):
     """
@@ -282,11 +282,7 @@ def tag_size(catalog):
 
     :return: El número de tags en el catálogo
     """
-    size = 0
-    tags = catalog['tags']
-    for tag in tags:
-        size += 1
-    return size
+    return lt.size(catalog['tags'])
 
 
 def book_tag_size(catalog):
@@ -297,11 +293,7 @@ def book_tag_size(catalog):
 
     :return: El número de book_tags en el catálogo
     """
-    size = 0
-    book_tags = catalog['book_tags']
-    for book_tag in book_tags:
-        size += 1
-    return size
+    return lt.size(catalog['book_tags'])
 
 
 # Funciones utilizadas para comparar elementos dentro de una lista
