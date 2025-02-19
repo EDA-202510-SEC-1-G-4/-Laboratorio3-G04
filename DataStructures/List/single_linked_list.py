@@ -60,4 +60,13 @@ def size(my_list):
 def first_element (my_list):
     return my_list["first"]["info"]
 
+def is_empty (my_list):
+    return my_list["size"] == 0
+
+def get_last_element (my_list):
+    return my_list["last"]["info"]
+
+def remove_first (my_list):
+    
+    return my_list
 
